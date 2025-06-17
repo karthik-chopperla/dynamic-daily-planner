@@ -40,13 +40,11 @@ def simulate_learning_behavior():
 def insert_meal_slots_dynamic(start_dt, end_dt):
     breakfast = start_dt + datetime.timedelta(minutes=60)
     lunch = breakfast + datetime.timedelta(hours=3)
-    snacks = lunch + datetime.timedelta(hours=4)
-    dinner = min(end_dt - datetime.timedelta(hours=2), snacks + datetime.timedelta(hours=3))
+    dinner = lunch + datetime.timedelta(hours=6)
 
     meal_slots = {
         (breakfast, "Breakfast"),
         (lunch, "Lunch"),
-        (snacks, "Snacks"),
         (dinner, "Dinner")
     }
 
